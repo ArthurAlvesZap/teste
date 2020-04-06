@@ -1,0 +1,276 @@
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>QUANTO VOCÊ GASTA EM ENERGIA?</title>
+    <meta name="viewport" content=" width=device-width, initial-scale=1.0">
+    <style>
+
+        /* Media Queries: Tablet Landscape */
+        @media screen and (max-width: 1060px) {
+            #primary { width:67%; }
+            #secondary { width:30%; margin-left:3%;}
+        }
+
+        /* Media Queries: Tabled Portrait */
+        @media screen and (max-width: 768px) {
+            #primary { width:100%; }
+            #secondary { width:100%; margin:0; border:none; }
+        }
+
+        @media (min-device-width:600px) {
+            img[data-src-600px] {
+                content: attr(data-src-600px, url);
+            }
+        }
+
+        @media (min-device-width:800px) {
+            img[data-src-800px] {
+                content: attr(data-src-800px, url);
+            }
+        }
+
+        img { max-width: 100%; height: auto; }
+
+        h1{
+            text-align:center;
+            color: seagreen;
+            font-family: "Montserrat",sans-serif;
+             }
+        title{
+            text-align: center;
+            color:red;
+        }
+
+       li {
+            margin: 0 20px 20px;
+            padding: 20px;
+            text-align: center;
+            -webkit-box-shadow: 0 20px 20px 0 rgba(0,0,0,0);
+            box-shadow: 0 2px 20px 0 rgba(0,0,0,0);
+            background-color: #fff;
+        }
+
+       input[type=radio] {
+           display:none;
+       }
+       input[type=radio] + label {
+           display:inline-block;
+           width:95%;
+           padding:10px;
+           border:1px solid #ddd;
+           margin-bottom:10px;
+           cursor:pointer;
+       }
+       input[type=radio] + label:hover{ border:1px solid #000000;}
+       input[type=radio]:checked + label {
+           background-image: none;
+           background-color:#0C0;
+           color:#fff;
+           border:1px solid #0C0 !important;
+           -webkit-transition: all 0.2s ease-in-out;
+           -moz-transition: all 0.2s ease-in-out;
+           -o-transition: all 0.2s ease-in-out;
+           -ms-transition: all 0.2s ease-in-out;
+           transition: all 0.2s ease-in-out;
+       }
+
+       li {
+           font-family: 'MontSerrat', sans-serif;
+       }
+
+        input[type=text]{
+            border-radius:4px;
+            -moz-border-radius:4px;
+            -webkit-border-radius:4px;
+            box-shadow: 1px 1px 2px #333333;
+            -moz-box-shadow: 1px 1px 2px #333333;
+            -webkit-box-shadow: 1px 1px 2px #333333;
+            background: #cccccc;
+            border:1px solid #000000;
+            width:150px
+        }
+
+        textarea{
+            border: 1px solid #000000;
+            background:#cccccc;
+            width:150px;
+            height:100px;
+            border-radius:4px;
+            -moz-border-radius:4px;
+            -webkit-border-radius:4px;
+            box-shadow: 1px 1px 2px #333333;
+            -moz-box-shadow: 1px 1px 2px #333333;
+            -webkit-box-shadow: 1px 1px 2px #333333;
+        }
+
+        input[type=text]:hover, textarea:hover{
+            background: #ffffff; border:1px solid #990000;
+        }
+
+
+        input[type=button], input[type=submit], input[type=reset] {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;}
+
+        </style>
+    <body>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('label').click(function() {
+            $('label').removeClass('worngans');
+            $(this).addClass('worngans');
+        });
+    });
+</script>
+        <ul><div id="page-wrap">
+
+
+
+            <h1>FAÇA E ECONOMIZE EM SUAS CONTAS</h1>
+            <form method="post" action="result.php" id="quiz">
+
+
+                    <li>
+
+                        <h3>QUANTO VOCÊ GASTA EM ELETRICIDADE?</h3>
+
+                        <div>
+                            <input type="radio" name="question-1-answers" id="question-1-answers-B" value="50" />
+                            <label for="question-1-answers-B">Menos de R$ 100</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-1-answers" id="question-1-answers-C" value="100" />
+                            <label for="question-1-answers-C">Mais de R$ 100</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-1-answers" id="question-1-answers-D" value="200" />
+                            <label for="question-1-answers-D">Mais de R$ 200</label>
+                        </div>
+
+                       <div>
+                            <input type="radio" name="question-1-answers" id="question-1-answers-F" value="400" />
+                            <label for="question-1-answers-F">Mais de R$ 300</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-1-answers" id="question-1-answers-G" value="500" />
+                            <label for="question-1-answers-G">Mais de R$ 400</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-1-answers" id="question-1-answers-E" value="600" />
+                            <label for="question-1-answers-E">Mais de R$ 500</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-1-answers" id="question-1-answers-H" value="700" />
+                            <label for="question-1-answers-H">Mais de R$ 600</label>
+                        </div>
+
+                    </li>
+
+                    <li>
+
+                        <h3>QUANTOS METROS QUADRADOS TEM O SEU IMÓVEL?</h3>
+
+                        <div>
+                            <input type="radio" name="question-2-answers" id="question-2-answers-A" value="https://economiza-brasil.myshopify.com/products/ecotronic-rmkt-1" />
+                            <label for="question-2-answers-A">Menos de 100 m²</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-2-answers" id="question-2-answers-B" value="https://economiza-brasil.myshopify.com/products/pacote-personalizado-ecotronic-promocao-exclusiva-2" />
+                            <label for="question-2-answers-B">Mais de 100 m²</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-2-answers" id="question-2-answers-C" value="https://economiza-brasil.myshopify.com/products/ecotronic-rmkt-3" />
+                            <label for="question-2-answers-C">Mais de 200 m²</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-2-answers" id="question-2-answers-D" value="https://economiza-brasil.myshopify.com/products/ecotronic-rmkt-4" />
+                            <label for="question-2-answers-D">Mais de 300 m²</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-2-answers" id="question-2-answers-E" value="https://economiza-brasil.myshopify.com/products/ecotronic-rmkt-5" />
+                            <label for="question-2-answers-E">Mais de 400 m²</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="question-2-answers" id="question-2-answers-F" value="https://economiza-brasil.myshopify.com/products/ecotronic-rmkt-6" />
+                            <label for="question-2-answers-F">Mais de 500 m²</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="question-2-answers" id="question-2-answers-G" value="https://economiza-brasil.myshopify.com/products/ecotronic-rmkt-7" />
+                            <label for="question-2-answers-G">Mais de 600 m²</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="question-2-answers" id="question-2-answers-H" value="https://economiza-brasil.myshopify.com/products/ecotronic-promo-8" required="" onemptied="this.setCustomValidity('Preencha este campo para continuar')">
+                            <label for="question-2-answers-H">Mais de 700 m²</label>
+                        </div>
+
+                    </li>
+
+                    <li>
+
+                        <h3>DESEJA ECONOMIZAR QUANTO POR MÊS?</h3>
+
+                        <div>
+                            <input type="radio" name="question-3-answers" id="question-3-answers-A" value="0.2" />
+                            <label for="question-3-answers-A">Quero diminuir minha conta em 20%</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-3-answers" id="question-3-answers-B" value="0.3" />
+                            <label for="question-3-answers-B">Quero diminuir minha conta em 30%</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-3-answers" id="question-3-answers-C" value="0.4" />
+                            <label for="question-3-answers-C">Quero diminuir minha conta em 40%</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-3-answers" id="question-3-answers-D" value="0.5" />
+                            <label for="question-3-answers-D">Quero diminuir minha conta em 50%</label>
+                        </div>
+
+                        <div>
+                            <input type="radio" name="question-3-answers" id="question-3-answers-E" value="0.6" />
+                            <label for="question-3-answers-E">Quero diminuir minha conta em 60%</label>
+                        </div>
+                        <div>
+                        <h3>DIGITE O NOME DA SUA CIDADE:</h3>
+                        <input type="text" name ="cidade"/>
+                        </div>
+                        <div>
+                            <h3>DIGITE SEU DDD:</h3>
+                            <input type="number" name ="ddd">
+                            <h3>DIGITE SEU TELEFONE:</h3>
+                            <input type="number" name ="celular"required=""oninvalid="this.setCustomValidity('Preencha este campo para continuar')" >
+                        </div>
+                </li>
+                <div>
+
+
+                               <h1><input type="submit" value="ENVIAR" class="submitbtn" /></h1>
+
+
+        </div>
+            </form>
+
+</body>
+</html>
+
+<?php
+
+
+?>
